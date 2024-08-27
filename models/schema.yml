@@ -29,5 +29,3 @@ sources:
           tests:
             - unique:
                 column_name: "(orders_id || '-' || pdt_id)"
-                
-                
