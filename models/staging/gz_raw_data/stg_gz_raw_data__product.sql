@@ -16,4 +16,4 @@ renamed as (
 
 )
 
-select * from renamed
+select products_id, purchase_price from renamed

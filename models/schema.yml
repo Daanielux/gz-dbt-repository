@@ -2,7 +2,32 @@ version: 2
 
 sources:
     - name: gz_raw_data
+      description: greenweez raw data source
       tables:
         - name: product
-        - name: sales
+          description: products of greenweez
+          columns:
+            - name: products_id
+              description: products identification 
+              tests:
+              - unique:
+                  column_name: "(products_id)"
+              - not_null:
+                  column_name: "(products_id)"
         - name: ship
+          description: shipping of greenweez
+          columns:
+            - name: orders_id
+              description: orders identification
+              tests:
+              - unique:
+                  column_name: "(orders_id)"
+              - not_null:
+                  column_name: "(orders_id)"
+        - name: sales
+          description: sales of greenweez
+          tests:
+            - unique:
+                column_name: "(orders_id || '-' || pdt_id)"
+                
+                

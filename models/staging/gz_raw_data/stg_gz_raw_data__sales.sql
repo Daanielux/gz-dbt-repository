@@ -19,4 +19,4 @@ renamed as (
 
 )
 
-select * from renamed
+select date_date, concat(orders_id,'-',products_id) AS clave, orders_id, products_id, revenue, quantity from renamed
