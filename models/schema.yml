@@ -29,6 +29,14 @@ sources:
           tests:
             - unique:
                 column_name: "(orders_id || '-' || pdt_id)"
+        - name: adwords
+          description: adwords campaign
+        - name: bing
+          description: bing campaign
+        - name: criteo
+          description: criteo campaign
+        - name: facebook
+          description: facebook campaign
 
 models:
    - name: stg_gz_raw_data__product
