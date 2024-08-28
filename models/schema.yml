@@ -54,4 +54,19 @@ models:
         description: primary key
         tests:
           - unique
-          - not_null              
+          - not_null
+   - name: int_sales__margin
+     description: sales merged products 
+     tests:
+      - unique
+      - not_null
+   - name: int_orders__margin
+     description: orders margins 
+     tests:
+      - unique
+      - not_null
+   - name: int_orders__operational
+     description: orders margin merged ship 
+     tests:
+      - unique
+      - not_null
