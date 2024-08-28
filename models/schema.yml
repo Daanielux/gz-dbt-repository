@@ -130,3 +130,10 @@ models:
       - not_null
    - name: finance_days
      description: finance calculation per days
+   - name: int_campaigns_day
+     description: per_day
+     tests:
+      - unique:
+          column_name: date_date
+      - not_null:
+          column_name: date_date
