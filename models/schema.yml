@@ -29,3 +29,29 @@ sources:
           tests:
             - unique:
                 column_name: "(orders_id || '-' || pdt_id)"
+
+models:
+   - name: stg_gz_raw_data__product
+     description: list of products
+     columns: 
+      - name: products_id
+        description: primary key
+        tests:
+          - unique
+          - not_null
+   - name: stg_gz_raw_data__ship
+     description: list of shippings
+     columns: 
+      - name: orders_id
+        description: primary key
+        tests:
+          - unique
+          - not_null
+   - name: stg_gz_raw_data__sales
+     description: list of sales
+     columns: 
+      - name: clave
+        description: primary key
+        tests:
+          - unique
+          - not_null              
