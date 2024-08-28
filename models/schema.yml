@@ -31,14 +31,43 @@ sources:
                 column_name: "(orders_id || '-' || pdt_id)"
         - name: adwords
           description: adwords campaign
+          tests:
+            - unique:
+                column_name: "(date_date || '-' || campaign_key)"
+            - not_null:
+                column_name: "(date_date || '-' || campaign_key)"
         - name: bing
           description: bing campaign
+          tests:
+            - unique:
+                column_name: "(date_date || '-' || campaign_key)"
+            - not_null:
+                column_name: "(date_date || '-' || campaign_key)"
         - name: criteo
           description: criteo campaign
+          tests:
+            - unique:
+                column_name: "(date_date || '-' || campaign_key)"
+            - not_null:
+                column_name: "(date_date || '-' || campaign_key)"
         - name: facebook
           description: facebook campaign
+          tests:
+            - unique:
+                column_name: "(date_date || '-' || campaign_key)"
+            - not_null:
+                column_name: "(date_date || '-' || campaign_key)"
 
 models:
+   - name: int_campaigns
+     description: merged all campaigns
+     tests:
+      - unique:
+          column_name: "(date_date || '-' || campaign_key)"
+      - not_null:
+          column_name: paid_source
+      - not_null:
+          column_name: campaign_name
    - name: stg_gz_raw_data__product
      description: list of products
      columns: 
